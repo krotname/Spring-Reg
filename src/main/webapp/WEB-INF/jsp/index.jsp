@@ -56,8 +56,6 @@
   </sec:authorize>
   <h4><a class="txt2" href="/news">Новости (только пользователь)</a></h4>
   <h4><a class="txt2"  href="/admin">Пользователи (только админ)</a></h4>
-  <h4><a class="txt2"  href="/test">
-  тест</a></h4>
   			</div>
 		</div>
 	</div>
