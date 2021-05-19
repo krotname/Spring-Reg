@@ -1,11 +1,11 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Главная</title>
+  <title>Новости</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <link rel="stylesheet" type="text/css" href="${contextPath}/resources/css/style.css">
   
@@ -32,31 +32,27 @@
 	<link rel="stylesheet" type="text/css" href="${contextPath}/resources/css/util.css">
 	<link rel="stylesheet" type="text/css" href="${contextPath}/resources/css/main.css">
 <!--===============================================================================================-->
-
 </head>
 <body>
 <div>
 	<div class="limiter">
+
 		<div class="container-login100">
+
 			<div class="wrap-login100">
 							<div class="login100-form-title" style="background-image: url(${contextPath}/resources/images/bg-01.jpg);">
 					<span class="login100-form-title-1">
-						Форма авторизации
+						Новости
 					</span>
 				</div>
-   <sec:authorize access="isAuthenticated()">
-  <h3>Авторизован с логином: ${pageContext.request.userPrincipal.name}</h3>
-    </sec:authorize>
-  <sec:authorize access="!isAuthenticated()">
-    <h4><a class="txt2" href="/login">Войти</a></h4>
-    <h4><a class="txt2" href="/registration">Зарегистрироваться</a></h4>
-  </sec:authorize>
-  <sec:authorize access="isAuthenticated()">
-    <h4><a class="txt2" href="/logout">Выйти</a></h4>
-  </sec:authorize>
-  <h4><a class="txt2" href="/news">Новости (только пользователь)</a></h4>
-  <h4><a class="txt2"  href="/admin">Пользователи (только админ)</a></h4>
-    <h4><a class="txt2"  href="/product">product</a></h4>
+				<br/><br/>
+<div>
+    <h2>Новости <br> Только для авторизованных пользователей пользователей.</h2>
+	<div>
+	Эта форма авторизации работает на Spring Boot,  Spring MVC и  Spring Security
+	</div>
+<br/><br/>
+			  <a class="txt2" href="/">Главная</a>
   			</div>
 		</div>
 	</div>

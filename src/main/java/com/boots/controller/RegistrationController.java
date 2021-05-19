@@ -19,8 +19,7 @@ public class RegistrationController {
 
     @Autowired
     private UserService userService;
-    private static Logger logger = LogManager.getRootLogger();
-
+    private static final Logger logger = LogManager.getLogger(RegistrationController.class);
 
     @GetMapping("/registration")
     public String registration(Model model) {
