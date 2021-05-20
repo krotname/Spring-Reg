@@ -56,6 +56,11 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
+        <dependency>
+            <groupId>org.mountcloud</groupId>
+            <artifactId>graphql-client</artifactId>
+            <version>1.2</version>
+        </dependency>
 
 
         <dependency>
@@ -63,6 +68,8 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
     </dependencies>
+
+
 
     <properties>
         <java.version>1.8</java.version>
