@@ -1,6 +1,7 @@
 package com.boots.controller;
 
 import com.boots.entity.User;
+import com.boots.service.ProductService;
 import com.boots.service.UserService;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -20,31 +21,15 @@ import java.util.Map;
 @Controller
 public class ProductController {
     @Autowired
-    private UserService userService;
+    private ProductService productService;
     private static final Logger logger = LogManager.getLogger(ProductController.class);
 
     @GetMapping("/product")
     public String registration(Model model) {
 
-
-        GraphqlClient client = GraphqlClient.buildGraphqlClient("http://localhost:8080/v1/graphql");
-
-        GraphqlQuery query = new DefaultGraphqlQuery("employee");
-        query.addResultAttributes("lastname", "name");
-        Map data = null;
-        try {
-            GraphqlResponse response = client.doQuery(query);
-            data = response.getData();
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        model.addAttribute("product", data);
-
-        System.out.println(data);
-        logger.info("product" + data);
+        Object product = productService.getProduct();
+        model.addAttribute("product", product);
+        logger.info("product " + product);
         return "product";
 
     }
