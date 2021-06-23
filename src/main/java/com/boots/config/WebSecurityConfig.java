@@ -38,6 +38,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                     //Доступ разрешен всем пользователей
                     .antMatchers("/","/product/**", "/resources/**" ).permitAll()
                     .antMatchers("/","/GraphQLtest", "/GraphQLtest/**" ).permitAll()
+                    .antMatchers("/","/ActiveMQAdd", "/ActiveMQAdd/**" ).permitAll()
                 //Все остальные страницы требуют аутентификации
                 .anyRequest().authenticated()
                 .and()
