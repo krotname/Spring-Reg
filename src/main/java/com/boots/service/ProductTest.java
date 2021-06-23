@@ -65,7 +65,5 @@ public class ProductTest {
         System.out.println(" ----- " + data.toString());
         String datas = data.toString().substring(16, data.toString().length() - 3);
         System.out.println(datas);
-        Product product1 = gson.fromJson(datas, Product.class);
-        System.out.println(product1);
     }
 }
