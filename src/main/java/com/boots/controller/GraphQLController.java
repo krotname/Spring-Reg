@@ -28,8 +28,15 @@ public class GraphQLController {
 
     @GetMapping("/ActiveMQAdd/{m}")
     public String ActiveMQAdd(@PathVariable("m") String message) {
+        System.out.println(message);
         jmsTemplate.convertAndSend("queue", message);
         return "Done";
+    }
+
+    @GetMapping("/graylog-test/{m}")
+    public String graylogtest(@PathVariable("m") String message) {
+        System.out.println(message);
+        return "tested succes";
     }
 
     @GetMapping("/GraphQLtest")
